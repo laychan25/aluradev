@@ -1,7 +1,25 @@
-body {
+html , body {
     background-color: #051d3b;
-    margin: 1.5rem;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     
 }
+
+
+ @media (max-width:450px){
+      body{
+        margin: .5rem;
+        overflow-x: hidden;
+        max-width: 100vw;
+        box-sizing: border-box;
+      }
+ }

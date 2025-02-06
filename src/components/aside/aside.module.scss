@@ -1,0 +1,49 @@
+.container{
+    margin-left: 40px;
+  font-family: "Inter", serif;
+  color: #fff;  
+
+}
+
+.menu{
+    font-weight: 400;
+    letter-spacing: .6pc;
+    padding-bottom: 20px;
+   
+}
+
+.div{
+    display: flex;
+    gap: 20px;
+    padding-bottom: 10px;
+   
+}
+
+
+.lista{
+    list-style-type: none;
+    
+}
+
+.item{
+    align-self: center;
+    
+}
+
+@media (max-width:450px){
+      .container{
+        display: none;
+      }
+     
+      .aside{
+        display: flex;
+        justify-content: flex-end;
+        margin: 1rem;
+        padding: 10px;
+        
+      }
+
+      .div img{
+         width: 40px;
+      }
+}

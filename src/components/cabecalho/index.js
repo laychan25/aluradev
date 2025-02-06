@@ -8,8 +8,8 @@ function Cabecalho(){
         <div >
         <img src={logo} className={styles.logo} alt='logo da alura dev'/>
         </div>
-        <div>
-           <input className={`${styles.inputPesquisa} ${styles.inputPesquisaCel} `}  placeholder='Busque por algo'></input>
+        <div className={styles.containerInput}>
+           <input className={styles.inputPesquisa}  placeholder='Busque por algo'></input>
         </div>
         <div className={styles.icone}>
             <img src={icon} className={styles.iconeFoto}  alt='Foto de perfil'/> 
