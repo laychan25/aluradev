@@ -5,12 +5,12 @@ import comunidade from '../../assets/comunidade.png'
 function Aside(){
     return (
         <div className={styles.container}>
-          <p className={styles.menu}>Menu</p>
+          <p className={styles.menu}>MENU</p>
           <aside className={styles.aside}>
             <ul className={styles.lista}>
                 <div className={styles.div} >
                  <img src={editar} alt='editar'/>
-                <li className={styles.item}>Editar</li>
+                <li className={styles.item}>Editor de código</li>
                 </div>
                 <div className={styles.div}>
                  <img src={comunidade} alt='Comunidade' />

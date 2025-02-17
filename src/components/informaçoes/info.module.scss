@@ -1,0 +1,64 @@
+.div{
+    width: 100%;
+    display: block;
+    text-align: start;
+     color: #ffff;
+    letter-spacing: .2pc;
+    
+   
+    
+   
+}
+
+p{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 5px;
+   
+}
+
+.inputDesc {
+   display: block;
+   width: 200px;
+   height: 56px;
+   background-color: #2d415b;
+   border: 0;
+   margin-bottom: 15px;
+   border-radius: 5px;
+   
+  
+}
+
+textarea:focus, input:focus, select:focus{
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+}
+
+.personalizacao{
+    margin-bottom: 20px;
+    display: block;
+    width: 200px;
+    height: 56px;
+    background-color: #2d415b;
+    border-radius: 5px;
+    border: 0;
+    color: #ffff;
+}
+
+.cor{
+    width: 200px;
+    height: 56px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+button{
+    width:200px;
+    height: 56px;
+    background-color:#5081fb;
+    border: 0;
+    border-radius: 5px;
+    color: #ffff;
+}
