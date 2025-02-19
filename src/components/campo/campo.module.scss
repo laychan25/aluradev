@@ -9,12 +9,20 @@
 }
 
 .inputTexto{
+    padding: 20px;
     width: 700px;
     height: 350px;
     background-color: #000;
     border: #000;
     border-radius: 5px;
     color: #fff;
+}
+
+
+.code{
+    display: flex;
+    width: 100px;
+    background-color: red;
 }
 
 

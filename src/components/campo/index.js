@@ -1,16 +1,42 @@
+import {useState } from "react";
 import { useCor } from "../cotextoCor";
 import style from "./campo.module.scss";
-function Campo() {
+import hljs from 'highlight.js';
+import 'highlight.js/styles/github.css';
 
-  const {cor } = useCor()
- 
+
+
+function Campo() {
+  const [code, setCode] = useState("");
+  const [highlightCode , setHightLight] = useState(null)
+
+  
+  const { cor } = useCor();
+
+  const ativaHl = ({code}) => {
+    if(code){
+      const codigoString = code.toString()
+      setHightLight(codigoString)
+      console.log(codigoString)
+      return <p>{codigoString}</p>;
+    }
+  };
+
   return (
     <div className={style.container}>
-        <div style={{backgroundColor: `${cor}` }} className={style.cor}>
-           <input type="text" className={style.inputTexto}></input>
+      <div style={{ backgroundColor: `${cor}` }} className={style.cor}>
+        <textarea
+          value={code}
+          onChange={(e) => setCode(e.target.value)}
+          type="text"
+          className={style.inputTexto}
+        ></textarea>
       </div>
+      {highlightCode}
       <div className={style.containerBotao}>
-      <button className={style.botao}>Visualizar com o highlight</button>
+        <button onClick={()=> ativaHl({code})} className={style.botao}>
+          Visualizar com o highlight
+        </button>
       </div>
     </div>
   );

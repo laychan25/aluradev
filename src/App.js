@@ -6,7 +6,11 @@ import Campo from "./components/campo";
 import Infos from "./components/informaçoes";
 import { CorProvider } from "./components/cotextoCor";
 
+
+
 function App() {
+  
+  
   return (
     <div className={style.app}>
       <Cabecalho />
@@ -14,7 +18,7 @@ function App() {
         <Aside />
         <CorProvider>
         <Campo />
-        <Infos />
+        <Infos  />
         </CorProvider>
       </div>
     </div>
