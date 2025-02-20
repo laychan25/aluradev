@@ -1,4 +1,4 @@
-import {useState } from "react";
+import {useEffect, useState } from "react";
 import { useCor } from "../cotextoCor";
 import style from "./campo.module.scss";
 import hljs from 'highlight.js';
@@ -10,12 +10,16 @@ function Campo() {
   const [code, setCode] = useState("");
   const [highlightCode , setHightLight] = useState(null)
 
-  
   const { cor } = useCor();
+
+ useEffect(()=>{
+    hljs.highlightAll()
+ },[highlightCode])
 
   const ativaHl = ({code}) => {
     if(code){
-      const codigoString = code.toString()
+      const codigoString = code.toString();
+      
       setHightLight(codigoString)
       console.log(codigoString)
       return <p>{codigoString}</p>;
@@ -32,7 +36,9 @@ function Campo() {
           className={style.inputTexto}
         ></textarea>
       </div>
-      {highlightCode}
+      <pre>
+       <code>{highlightCode}</code>
+      </pre>
       <div className={style.containerBotao}>
         <button onClick={()=> ativaHl({code})} className={style.botao}>
           Visualizar com o highlight
