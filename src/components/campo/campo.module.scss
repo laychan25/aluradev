@@ -13,17 +13,40 @@
     width: 700px;
     height: 350px;
     background-color: #000;
-    border: #000;
+    border:1px solid #000;
     border-radius: 5px;
     color: #fff;
+  
 }
 
-
+pre {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    border-radius: 5px;
+    overflow: auto; 
+  }
+  
+  pre code {
+    display: block; 
+    white-space: pre-wrap;  
+    background-color: #000 !important;  
+    color: inherit;  
+  }
 .code{
-    display: flex;
-    width: 100px;
-    background-color: red;
+    display: block; 
+    text-align: start; 
+    background-color: #000 !important;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    height: 350px;
+    border: 1px solid #000;
+    border-radius: 5px;
+  
 }
+
+
 
 
 .containerBotao{
