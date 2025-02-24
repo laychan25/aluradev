@@ -1,0 +1,61 @@
+.conteiner{
+    display: block;
+    background-color: #041832;
+    width: 500px;
+    height: 370px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.div{
+    justify-self: center;
+    background-color: black;
+    width: 450px;
+    height: 230px;
+}
+
+
+.secao{
+    display: flex;
+    justify-content: space-between;
+}
+.infos{
+    margin: 20px;
+    color: rgb(243, 231, 231);
+  
+}
+
+.icones{
+    display: flex;
+    margin-left: 20px;
+    text-align: left;
+    gap: 10px;
+    width: 100px;
+    
+}
+
+.img{
+    
+    width: 24px;
+    height: 24px;
+   
+}
+
+.perfil {
+    display: flex;
+    color: white;
+    margin-right: 20px;
+   
+}
+
+.imgPerfil{
+    border-radius: 50px;
+    width: 24px;
+    height: 24px;
+
+   
+}
+
+
+
+
