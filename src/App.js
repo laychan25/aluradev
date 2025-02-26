@@ -6,6 +6,7 @@ import { CorProvider } from "./components/cotextoCor";
 import Editor from "./components/editor/Editor";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Comunidade from "./components/comunidade/Comunidade";
+import { PublicacaoProvider } from "./components/contextoInfos";
 function App() {
   return (
     <BrowserRouter>
@@ -13,11 +14,13 @@ function App() {
         <Cabecalho />
         <div className={style.container}>
           <CorProvider>
+           <PublicacaoProvider>
             <Aside />
             <Routes>
               <Route path="/" element={<Editor />} />
               <Route path="/comunidade" element={<Comunidade />} />
             </Routes>
+            </PublicacaoProvider>
           </CorProvider>
         </div>
       </div>
