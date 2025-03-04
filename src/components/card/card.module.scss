@@ -1,18 +1,41 @@
+.display{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+ 
+     
+}
+
+
 .conteiner{
     display: block;
     background-color: #041832;
-    width: 500px;
-    height: 370px;
+    width: 450px;
+    height: 360px;
     text-align: left;
     border-radius: 10px;
+    box-sizing: border-box;
+    margin: 20px;
+   
+
+   
 }
 
 .div{
     justify-self: center;
     background-color: black;
-    width: 450px;
-    height: 230px;
-    color: wheat;
+    width: 400px;
+    height: 200px;
+    color: rgb(231, 229, 225);
+    border-radius: 5px;
+}
+
+.divCor{
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 

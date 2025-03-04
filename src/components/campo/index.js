@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { useCor } from "../cotextoCor";
+import { useCor } from "../../contextos/cotextoCor";
 import style from "./campo.module.scss";
 import hljs from "highlight.js";
 import "highlight.js/styles/atom-one-dark.css";
-import { useInfos } from "../contextoInfos";
+import { useInfos } from "../../contextos/contextoInfos";
 
 
 

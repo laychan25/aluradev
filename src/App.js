@@ -1,30 +1,35 @@
 import Cabecalho from "./components/cabecalho";
+import { useLocation } from "react-router-dom";
 import style from "./app.module.scss";
 import "./index.css";
 import Aside from "./components/aside";
-import { CorProvider } from "./components/cotextoCor";
+import { CorProvider } from "./contextos/cotextoCor";
 import Editor from "./components/editor/Editor";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {Route, Routes } from "react-router-dom";
 import Comunidade from "./components/comunidade/Comunidade";
-import { PublicacaoProvider } from "./components/contextoInfos";
+import { PublicacaoProvider } from "./contextos/contextoInfos";
 function App() {
+  const location = useLocation();
+
+  
   return (
-    <BrowserRouter>
-      <div className={style.app}>
-        <Cabecalho />
-        <div className={style.container}>
-          <CorProvider>
-           <PublicacaoProvider>
+    <div className={style.app}>
+      <Cabecalho />
+      <div className={location.pathname === "/comunidade" ? style.comunidade : style.editor}>
+        <CorProvider>
+          <PublicacaoProvider>
             <Aside />
             <Routes>
               <Route path="/" element={<Editor />} />
-              <Route path="/comunidade" element={<Comunidade />} />
+              <Route
+                path="/comunidade"
+                element={<Comunidade className={style.comunidade} />}
+              />
             </Routes>
-            </PublicacaoProvider>
-          </CorProvider>
-        </div>
+          </PublicacaoProvider>
+        </CorProvider>
       </div>
-    </BrowserRouter>
+    </div>
   );
 }
 

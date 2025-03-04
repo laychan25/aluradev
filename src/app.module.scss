@@ -1,4 +1,4 @@
-.container{
+.editor{
     margin: 1rem;
     display: grid;
     grid-template-columns: 20% 60% 20% ;
@@ -8,3 +8,12 @@
     min-height: 100vh;
 }
 
+.comunidade {
+    display: flex;
+    grid-template-columns: 20% auto auto;
+    grid-template-rows: 20% auto auto;
+    margin: 1rem;
+    width: 100%;
+    min-height: 100vh;
+    gap: 10px;
+}

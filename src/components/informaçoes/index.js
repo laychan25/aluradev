@@ -1,7 +1,7 @@
 import styles from "./info.module.scss";
-import { useCor } from "../cotextoCor";
+import { useCor } from "../../contextos/cotextoCor";
 import { useState } from "react";
-import {  useInfos } from "../contextoInfos";
+import {  useInfos } from "../../contextos/contextoInfos";
 
 function Infos() {
   const { cor, setCor } = useCor();
