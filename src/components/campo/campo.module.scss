@@ -19,7 +19,10 @@
   
 }
 
-pre {
+
+.cor{
+
+  pre {
     margin: 0;
     padding: 0;
     background-color: #000;
@@ -30,13 +33,15 @@ pre {
   pre code {
     display: block; 
     white-space: pre-wrap;  
-    background-color: #000 !important;  
     color: inherit;  
   }
+
+}
+    
 .code{
     display: block; 
     text-align: start; 
-    background-color: #000 !important;
+    background-color: #000  !important;
     color: #fff;
     padding: 20px;
     width: 100%;

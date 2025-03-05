@@ -6,7 +6,7 @@ import Aside from "./components/aside";
 import { CorProvider } from "./contextos/cotextoCor";
 import Editor from "./components/editor/Editor";
 import {Route, Routes } from "react-router-dom";
-import Comunidade from "./components/comunidade/Comunidade";
+import Comunidade from "./components/comunidade/index";
 import { PublicacaoProvider } from "./contextos/contextoInfos";
 function App() {
   const location = useLocation();

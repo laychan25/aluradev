@@ -1,85 +1,88 @@
-.display{
+.display {
   display: flex;
   align-items: center;
   width: 100%;
   flex-wrap: wrap;
   box-sizing: border-box;
- 
-     
-}
-
-
-.conteiner{
-    display: block;
-    background-color: #041832;
-    width: 450px;
-    height: 360px;
-    text-align: left;
-    border-radius: 10px;
-    box-sizing: border-box;
-    margin: 20px;
-   
-
-   
-}
-
-.div{
-    justify-self: center;
-    background-color: black;
-    width: 400px;
-    height: 200px;
-    color: rgb(231, 229, 225);
-    border-radius: 5px;
-}
-
-.divCor{
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-
-.secao{
-    display: flex;
-    justify-content: space-between;
-}
-.infos{
-    margin: 20px;
-    color: rgb(243, 231, 231);
   
 }
 
-.icones{
-    display: flex;
-    margin-left: 20px;
-    text-align: left;
-    gap: 10px;
-    width: 100px;
+.post{
+    display: flex !important;
+    flex-wrap: wrap;
+    border: none;
+    white-space: pre-wrap;  
     
 }
 
-.img{
+.post2{
+    background-color: none;
+    flex-wrap: wrap;
     
-    width: 24px;
-    height: 24px;
+    
    
+}
+
+
+
+.conteiner {
+  display: block;
+  background-color: #041832;
+  width: 450px;
+  height: 360px;
+  text-align: left;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin: 20px;
+}
+
+.div {
+  padding: 10px;
+  justify-self: center;
+  background-color: black;
+  width: 400px;
+  height: 200px;
+  color: rgb(231, 229, 225);
+  border-radius: 5px;
+  
+}
+
+.divCor {
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.secao {
+  display: flex;
+  justify-content: space-between;
+}
+.infos {
+  margin: 20px;
+  color: rgb(243, 231, 231);
+}
+
+.icones {
+  display: flex;
+  margin-left: 20px;
+  text-align: left;
+  gap: 10px;
+  width: 100px;
+}
+
+.img {
+  width: 24px;
+  height: 24px;
 }
 
 .perfil {
-    display: flex;
-    color: white;
-    margin-right: 20px;
-   
+  display: flex;
+  color: white;
+  margin-right: 20px;
 }
 
-.imgPerfil{
-    border-radius: 50px;
-    width: 24px;
-    height: 24px;
-
-   
+.imgPerfil {
+  border-radius: 50px;
+  width: 24px;
+  height: 24px;
 }
-
-
-
-

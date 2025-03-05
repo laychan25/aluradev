@@ -9,7 +9,8 @@
 }
 
 .comunidade {
-    display: flex;
+    display: grid;
+    flex-wrap: wrap;
     grid-template-columns: 20% auto auto;
     grid-template-rows: 20% auto auto;
     margin: 1rem;

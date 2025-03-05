@@ -42,7 +42,7 @@ function Infos() {
 
   const salva = (evento) => {
     evento.preventDefault();
-    lista.push({ nome, desq });
+    lista.push({ nome, desq ,cor});
     guardaValores()
     setNome("");
     setDesq("");

@@ -52,7 +52,7 @@ function Campo() {
             {code}
           </textarea>
         ) : (
-          <pre>
+          <pre className={style.pre}>
             <code className={style.code}>{highlightCode}</code>
           </pre>
         )}

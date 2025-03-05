@@ -3,9 +3,11 @@ import like from "../../assets/like.svg";
 import icon from "../../assets/icon.jpg";
 import styles from "./card.module.scss";
 import { useInfos } from "../../contextos/contextoInfos";
+import hljs from "highlight.js";
 
 function Card() {
-  const { publicacao } = useInfos();
+
+  const { publicacao } = useInfos([]);
 
   const postagens = publicacao.map((value, index) => {
     return (
@@ -33,12 +35,18 @@ function Card() {
     );
   });
 
+    hljs.highlightAll()
+
   return (
+ 
     <div className={styles.display}>
       <div className={styles.alo}>
-      <div>{postagens}</div>
+      <pre className={styles.post2}>
+        <code className={styles.post}>{postagens}</code>
+      </pre>
       </div>
     </div>
+  
   );
 }
 
