@@ -59,9 +59,9 @@
 @media (max-width: 450px) {
   .header {
     display: flex;
-    position:fixed;
-    top: 0;  // Fixa no topo
-    left: 0; // Alinha à esquerda
+    padding-bottom: 1rem;
+    top: 0;  
+    left: 0; 
     z-index: 1000;
     width: 100%;
     max-width: 100%;

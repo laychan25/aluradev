@@ -4,34 +4,23 @@
   width: 100%;
   flex-wrap: wrap;
   box-sizing: border-box;
-  
 }
 
-.post{
-    display: flex !important;
-    flex-wrap: wrap;
-    border: none;
-    white-space: pre-wrap;  
-    
+.post {
+  display: flex !important;
+  flex-wrap: wrap;
+  border: none;
+  white-space: pre-wrap;
 }
 
-.post2{
-    background-color: none;
-    flex-wrap: wrap;
-    
-    
-   
+.post2 {
+  background-color: none;
+  flex-wrap: wrap;
 }
 
- 
- pre code .hljs{
+pre code .hljs {
   background-color: transparent !important;
-
 }
-
-  
-
-
 
 .conteiner {
   display: block;
@@ -52,7 +41,6 @@
   height: 200px;
   color: rgb(231, 229, 225);
   border-radius: 5px;
-  
 }
 
 .divCor {
@@ -94,3 +82,23 @@
   width: 24px;
   height: 24px;
 }
+
+@media(max-width:450px){
+   .conteiner{
+    width: 80.2vw;
+    height: 50.5vh;
+    gap: 20px;
+    padding: 1rem;
+  
+   }
+   .div{
+    width: 70.2vw;
+    height: 44.5vh;
+   }
+   .code{
+    margin: 0;
+    padding: 0;
+   }
+   
+}
+

@@ -60,7 +60,7 @@ function Campo({code, setCode}) {
           className={style.botao}
         >
           {" "}
-          {ativo ? <p>Vizualizar com highlight</p> : <p>Voltar a editar</p>}
+          {ativo ? <p className={style.nomeBt}>Vizualizar com highlight</p> : <p className={style.nomeBt} >Voltar a editar</p>}
         </button>
       </div>
     </div>

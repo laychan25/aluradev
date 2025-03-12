@@ -18,3 +18,17 @@
     min-height: 100vh;
     gap: 10px;
 }
+
+
+@media (max-width:450px){
+    .editor{
+        display: block;
+        justify-content: center;
+    }
+
+    .comunidade{
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+}

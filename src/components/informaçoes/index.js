@@ -49,7 +49,7 @@ function Infos({code}) {
   return (
     <div className={styles.div}>
       <form onSubmit={salva}>
-        <p>SEU PROJETO</p>
+        <p className={styles.titulo}>SEU PROJETO</p>
         <div className={styles.desc}>
           <input
             type="text"
@@ -67,7 +67,7 @@ function Infos({code}) {
           ></input>
         </div>
         <div>
-          <p>PERSONALIZACÃO</p>
+          <p className={styles.titulo}>PERSONALIZACÃO</p>
           <select
             value={linguagem}
             onChange={(e) => setLinguagem(e.target.value)}
