@@ -3,26 +3,16 @@ import { useCor } from "../../contextos/cotextoCor";
 import style from "./campo.module.scss";
 import hljs from "highlight.js";
 import "highlight.js/styles/atom-one-dark.css";
-import { useInfos } from "../../contextos/contextoInfos";
 
-
-
-function Campo() {
-  const [code, setCode] = useState("");
+function Campo({code, setCode}) {
   const [highlightCode, setHightLight] = useState(null);
   const [ativo, setAtivo] = useState(true);
-  const {atualizaPublicacao}= useInfos()
 
   const toggleElemento = () => {
     setAtivo((prevState) => !prevState);
   };
 
-  const guardaCodigo = () =>{
-     atualizaPublicacao({
-      codigo : highlightCode
-     })
-  }
-
+ 
   const { cor } = useCor();
 
   useEffect(() => {
@@ -37,6 +27,11 @@ function Campo() {
       setHightLight(codigoString);
       return <p>{codigoString}</p>;
     }
+  };
+
+  const salva = () => {
+    toggleElemento();
+    console.log(code)
   };
 
   return (
@@ -60,7 +55,7 @@ function Campo() {
       <div className={style.containerBotao}>
         <button
           onClick={() => {
-            ativaHl({ code }, toggleElemento(), guardaCodigo());
+            ativaHl({ code }, salva());
           }}
           className={style.botao}
         >

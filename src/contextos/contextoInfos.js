@@ -12,29 +12,23 @@ export function PublicacaoProvider({ children }) {
       codigo:
         " .centered  display: flex; justify-content: center; align-items:center; height: 100vh;",
     },
+    
     {
       titulo: "Funçao imc",
       desc: "Funçao que calcula o imc",
       cor: "#3d1d3f",
       linguagemEscolhida: "Javascript",
       codigo:
-        "function calcularIMC(peso, altura) { if (typeof peso !== 'number' || typeof altura !== 'number') {console.error('Por favor, insira valores numéricos válidos para peso e altura.'); return;}",
+        "function calcularIMC (peso, altura) { if (typeof peso !== 'number' || typeof altura !== 'number') {console.error('Por favor, insira valores numéricos válidos para peso e altura.'); return;}",
     },
-    {
-      titulo: "type pessoa",
-      desc: "interface que tipa uma pessoa",
-      cor: "#33804a",
-      linguagemEscolhida: "React",
-      codigo:
-        ' interface Pessoa {nome: string;idade: number;}const pessoa: Pessoa = {nome: "Ana",idade: 25};',
-    }
+
+
 ]);
 
+
   function atualizaPublicacao(novaPublicacao) {
-    setPublicacao((prev) => ({
-      ...prev,
-      ...novaPublicacao,
-    }));
+    setPublicacao((prev) => [...prev, ...novaPublicacao])
+     
   }
 
   return (

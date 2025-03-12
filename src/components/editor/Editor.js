@@ -1,11 +1,11 @@
 import Campo from "../campo";
 import Infos from "../informaçoes";
 
-function Editor() {
+function Editor({code , setCode}) {
   return (
    <>
-      <Campo />
-      <Infos />
+      <Campo code={code} setCode={setCode} />
+      <Infos code={code} />
       
     </>
   );

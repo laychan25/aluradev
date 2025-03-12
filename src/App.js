@@ -8,8 +8,11 @@ import Editor from "./components/editor/Editor";
 import {Route, Routes } from "react-router-dom";
 import Comunidade from "./components/comunidade/index";
 import { PublicacaoProvider } from "./contextos/contextoInfos";
+import { useState } from "react";
 function App() {
   const location = useLocation();
+
+  const [code, setCode ]= useState("")
 
   
   return (
@@ -20,7 +23,7 @@ function App() {
           <PublicacaoProvider>
             <Aside />
             <Routes>
-              <Route path="/" element={<Editor />} />
+              <Route path="/" element={<Editor code={code} setCode={setCode} />} />
               <Route
                 path="/comunidade"
                 element={<Comunidade className={style.comunidade} />}

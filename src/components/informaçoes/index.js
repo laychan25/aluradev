@@ -1,33 +1,33 @@
 import styles from "./info.module.scss";
 import { useCor } from "../../contextos/cotextoCor";
 import { useState } from "react";
-import {  useInfos } from "../../contextos/contextoInfos";
+import { useInfos } from "../../contextos/contextoInfos";
 
-function Infos() {
+function Infos({code}) {
   const { cor, setCor } = useCor();
   const [nome, setNome] = useState("");
   const [desq, setDesq] = useState("");
   const [linguagem, setLinguagem] = useState("");
 
+ 
   const handleChange = (e) => {
-    setCor(e.target.value); 
+    setCor(e.target.value);
   };
 
-  const { atualizaPublicacao} = useInfos()
-  
+  const { atualizaPublicacao } = useInfos();
+
   const guardaValores = () => {
-    atualizaPublicacao({
+    atualizaPublicacao([{
       titulo: nome,
       desc: desq,
       linguagemEscolhida: linguagem,
-      cor: cor
-    });
-  
-
+      cor: cor,
+      codigo: code
+    }]);
   };
 
+ 
 
-  
   const guardaNome = (evento) => {
     setNome(evento.target.value);
   };
@@ -36,14 +36,12 @@ function Infos() {
     setDesq(evento.target.value);
   };
 
-  
-
   const lista = [{}];
 
   const salva = (evento) => {
     evento.preventDefault();
-    lista.push({ nome, desq ,cor});
-    guardaValores()
+    lista.push({ nome, desq, cor });
+    guardaValores();
     setNome("");
     setDesq("");
   };
