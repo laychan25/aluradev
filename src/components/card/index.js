@@ -19,7 +19,7 @@ function Card() {
         </div>
         <div className={styles.infos}>
           <h2>{value.titulo}</h2>
-          <p>{value.desc}</p>
+          <p className={styles.p}>{value.desc}</p>
         </div>
         <div className={styles.secao}>
           <div className={styles.icones}>
@@ -28,7 +28,7 @@ function Card() {
           </div>
           <div className={styles.perfil}>
             <img className={styles.imgPerfil} src={icon} alt="perfil " />
-            <p>@Harry</p>
+            <p className={styles.p}>@Harry</p>
           </div>
         </div>
       </div>

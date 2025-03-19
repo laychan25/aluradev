@@ -86,19 +86,32 @@ pre code .hljs {
 @media(max-width:450px){
    .conteiner{
     width: 80.2vw;
-    height: 50.5vh;
+    height: 45.5vh;
     gap: 20px;
     padding: 1rem;
   
    }
    .div{
     width: 70.2vw;
-    height: 44.5vh;
+    height: 20.5vh;
    }
+
    .code{
     margin: 0;
     padding: 0;
    }
    
+   .p{
+    opacity: 1;
+   }
+
+   .secao{
+    justify-content: space-between;
+   }
+
+   .perfil{
+    justify-self: flex-end;
+    
+   }
 }
 

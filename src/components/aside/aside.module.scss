@@ -34,6 +34,7 @@
 @media (max-width:450px){
       .container{
         display: none;
+        color: #fff;
       }
      
       .aside{
@@ -46,5 +47,22 @@
 
       .div img{
          width: 40px;
+      }
+
+      .menuHamburger{
+        display: flex;
+        position:absolute;
+        background-color: #041832;
+        border-radius: 5px;
+        max-width: 100%;
+        margin: 0;
+        width: 50vw;
+        padding-bottom: 0;
+        color: #fff;
+        justify-items: flex-end;
+        z-index: 10;
+      }
+      .lista{
+        align-items: flex-end;
       }
 }

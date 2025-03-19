@@ -13,15 +13,16 @@ function App() {
   const location = useLocation();
 
   const [code, setCode ]= useState("")
+  const [menu , setMenu] = useState(false)
 
   
   return (
     <div className={style.app}>
-      <Cabecalho />
+      <Cabecalho  menu={menu} setMenu={setMenu} />
       <div className={location.pathname === "/comunidade" ? style.comunidade : style.editor}>
         <CorProvider>
           <PublicacaoProvider>
-            <Aside />
+            <Aside  menu={menu} setMenu={setMenu} />
             <Routes>
               <Route path="/" element={<Editor code={code} setCode={setCode} />} />
               <Route
