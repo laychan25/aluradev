@@ -2,6 +2,7 @@ import styles from "./aside.module.scss";
 import editar from "../../assets/editar.png";
 import comunidade from "../../assets/comunidade.png";
 import { useNavigate } from "react-router-dom";
+import icone from '../../assets/icon.jpg'
 
 function Aside({ menu }) {
   const navegar = useNavigate();
@@ -28,6 +29,11 @@ function Aside({ menu }) {
             <img src={comunidade} alt="Comunidade" />
             <li className={styles.item}>Comunidade</li>
           </div>
+        <div className={styles.linha}></div>
+        <div className={styles.perfil}>
+          <img src={icone} width='30' height='30' alt="perfil" />
+          <p className={styles.nome}>Harry</p>
+        </div>
         </ul>
       </aside>
     </div>

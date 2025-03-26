@@ -13,12 +13,13 @@ function App() {
   const location = useLocation();
 
   const [code, setCode ]= useState("")
-  const [menu , setMenu] = useState(false)
+  const [menu , setMenu] = useState(false);
+  const [pesquisa , setPesquisa] = useState(false)
 
   
   return (
     <div className={style.app}>
-      <Cabecalho  menu={menu} setMenu={setMenu} />
+      <Cabecalho  menu={menu} setMenu={setMenu} setPesquisa={setPesquisa} pesquisa={pesquisa} />
       <div className={location.pathname === "/comunidade" ? style.comunidade : style.editor}>
         <CorProvider>
           <PublicacaoProvider>

@@ -35,14 +35,33 @@
       .container{
         display: none;
         color: #fff;
+      
       }
+      .menu{
+        display: none;
+      }
+      
      
       .aside{
         display: flex;
-        justify-content: flex-end;
         margin: 1rem;
-        padding: 10px;
+        padding: 5px;
+        position: absolute;
+        box-sizing: border-box;
+        padding-top: 5px;
+        left: 55%;
+        width: 224px;
+        height: 572px;
+        background-color: #2d415b;
+        border-radius: 16px;
         
+      }
+
+      .linha{
+          width: 100%;
+          height: 1px;
+          background-color: #fff;
+          opacity: 0.4;
       }
 
       .div img{
@@ -57,6 +76,7 @@
         max-width: 100%;
         margin: 0;
         width: 50vw;
+        top: 12%;
         padding-bottom: 0;
         color: #fff;
         justify-items: flex-end;
@@ -64,5 +84,17 @@
       }
       .lista{
         align-items: flex-end;
+        padding: 16px;
+      }
+      .nome{
+        opacity: 1;;
+      }
+      .perfil{
+        display: flex;
+        margin-top: 30px;
+        gap: 10px;
+      }
+      .perfil img{
+        border-radius: 50%
       }
 }

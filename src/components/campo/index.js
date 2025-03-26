@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useCor } from "../../contextos/cotextoCor";
 import style from "./campo.module.scss";
 import hljs from "highlight.js";
-import "highlight.js/styles/atom-one-dark.css";
+import "highlight.js/styles/monokai.css";
 
 function Campo({code, setCode}) {
   const [highlightCode, setHightLight] = useState(null);
