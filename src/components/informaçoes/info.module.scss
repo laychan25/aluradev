@@ -48,6 +48,8 @@ select:focus {
   height: 56px;
   border-radius: 5px;
   margin-bottom: 20px;
+  background-color: transparent;
+  border: 1px #ffff;
 }
 
 button {
@@ -76,4 +78,30 @@ button {
         width: 90vw;
     }
 
+}
+
+@media screen and (min-width: 450px) and (max-width: 1024px){
+   .titulo{
+    opacity: 1;
+   }
+
+   .inputDesc{
+    width: 95vw;
+   }
+
+  .personalizacao{
+    width: 45vw;
+  }
+  .cor{
+    width: 45vw;
+  }
+
+  button{
+    width: 95vw;
+  }
+
+  .perso{
+    display: flex;
+    gap: 30px;
+  }
 }

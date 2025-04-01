@@ -31,6 +31,10 @@
     
 }
 
+.perfil{
+  display: none;
+}
+
 @media (max-width:450px){
       .container{
         display: none;
@@ -97,4 +101,45 @@
       .perfil img{
         border-radius: 50%
       }
+}
+
+@media screen and (min-width: 450px) and (max-width: 1024px){
+   .container{
+    display: none
+   }
+   
+   .menu{
+    display: none;
+   }
+
+   .aside{
+    display: flex;
+    margin: 1rem;
+    padding: 5px;
+    position: absolute;
+    box-sizing: border-box;
+    padding-top: 5px;
+    left: 135%;
+    width: 260px;
+    height: 572px;
+    background-color: #2d415b;
+    border-radius: 16px;
+    
+  }
+   .menuHamburger{
+    display: flex;
+    position:absolute;
+    background-color: #041832;
+    border-radius: 5px;
+    max-width: 100%;
+    margin: 0;
+    width: 50vw;
+    top: 12%;
+    padding-bottom: 0;
+    color: #fff;
+    justify-items: flex-end;
+    z-index: 10;
+   }
+  
+  
 }

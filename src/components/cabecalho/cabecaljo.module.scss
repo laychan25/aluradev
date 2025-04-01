@@ -150,6 +150,36 @@
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 1024px){
-  
+@media screen and (min-width: 450px) and (max-width: 1024px){
+  .header{
+    display: flex;
+    justify-content: space-around;
+  }
+   .logo{
+    width: 20vw
+   }
+   .logo2{
+    width: 20vw;
+   }
+  .inputPesquisa{
+    width: 50vw;
+    height: 56px;
+  }
+  .iconeFoto {
+    display: none;
+  }
+
+  p {
+    opacity: 0;
+  }
+
+  .icones{
+    display: block;
+   
+  }
+  .icone:hover{
+    width: 26px;
+    border-radius: 0;
+  }
+
 }

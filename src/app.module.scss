@@ -1,7 +1,7 @@
 .editor{
     margin: 1rem;
     display: grid;
-    grid-template-columns: 20% 60% 20% ;
+    grid-template-columns: 20% 55% 20% ;
     text-align: center;
     gap: 20px;
     width: 100%;
@@ -31,4 +31,15 @@
         align-items: center;
         justify-content: center;
     }
+}
+
+@media screen and (min-width: 450px) and (max-width: 1024px){
+   .editor{
+    display: block;
+    margin: 1rem;
+    justify-content: center;
+    align-items: center
+     
+   };
+
 }

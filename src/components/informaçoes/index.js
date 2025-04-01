@@ -66,8 +66,8 @@ function Infos({code}) {
             className={styles.inputDesc}
           ></input>
         </div>
-        <div>
           <p className={styles.titulo}>PERSONALIZACÃO</p>
+        <div className={styles.perso}>
           <select
             value={linguagem}
             onChange={(e) => setLinguagem(e.target.value)}

@@ -1,16 +1,16 @@
 .cor {
   background-color: #3f8e91;
   padding: 15px;
-  width: 755px;
-  height: 400px;
+  width: 50vw;
+  height:70vh;
   border-radius: 5px;
   margin-bottom: 20px;
 }
 
 .inputTexto {
   padding: 20px;
-  width: 700px;
-  height: 350px;
+  width: 45vw;
+  height: 60vh;
   background-color: #000;
   border: 1px solid #000;
   border-radius: 5px;
@@ -51,7 +51,7 @@
 }
 
 .botao {
-  width: 755px;
+  width: 52vw;
   height: 45px;
   background-color: #0b254a;
 }
@@ -85,6 +85,40 @@
         }
      }
     
+  }
+
+  @media screen and (min-width: 450px) and (max-width: 1024px){
+    .container{
+     justify-content: center;
+      
+    }
+
+    .cor{
+      width: 95vw;
+      height: 70vh ;
+
+    }
+    .inputTexto{
+      margin: .5rem;
+      width: 85vw;
+      height: 60vh;
+    }
+
+    .code{
+      width: 95vw;
+      height: 60vh;
+      padding: 0;
+    }
+   
+    .containerBotao{
+      width: 95vw;
+    }
+
+    .nomeBt {
+      opacity: 1;
+    }
+
+
   }
 
   

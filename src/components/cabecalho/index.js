@@ -15,7 +15,7 @@ function Cabecalho({menu ,setMenu, setPesquisa, pesquisa }) {
   };
 
   const verificaTela = () => {
-    if (window.innerWidth <= 450) {
+    if (window.innerWidth <= 1024) {
       toggleMenu();
     }
   };

@@ -9,8 +9,6 @@ import { useEffect } from "react";
 function Card() {
   const { publicacao } = useInfos([]);
 
-  console.log(publicacao);
-
   const postagens = publicacao.map((value, index) => {
     return (
       <div key={index} className={styles.conteiner}>

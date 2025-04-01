@@ -83,9 +83,9 @@ pre code .hljs {
   height: 24px;
 }
 
-@media(max-width:450px){
+ @media screen and (min-width: 450px) and (max-width: 1024px){
    .conteiner{
-    width: 80.2vw;
+    width: 80vw;
     height: 45.5vh;
     gap: 20px;
     padding: 1rem;
