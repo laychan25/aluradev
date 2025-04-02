@@ -5,12 +5,22 @@ export const ContextoInfos = createContext();
 export function PublicacaoProvider({ children }) {
   const [publicacao, setPublicacao] = useState([
     {
-      titulo: "Css centralizado",
-      desc: "css de como centralizar um item ",
-      cor: "#105C7E",
-      linguagemEscolhida: "Css",
-      codigo:
-        " .centered  display: flex; justify-content: center; align-items:center; height: 100vh;",
+      titulo: "Funçao formata Data",
+      desc: "Essa funçao formata a data de duas maneiras distintas",
+      cor: "#0E3343",
+      linguagemEscolhida: "Javascript",
+      codigo:  `export function formatarData(data: Date, formato: FormatoData = FormatoData.PADRAO): string {
+    if (formato === FormatoData.DIA_SEMANA_DIA_MES_ANO) {
+        return data.toLocaleDateString("pt-br", {
+            weekday: "long",
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric"
+        });
+    } else if (formato === FormatoData.DIA_MES) {
+        return data.toLocaleDateString("pt-br", { day: "2-digit", month: "2-digit" });
+    }
+}`
     },
     
     {
@@ -21,7 +31,27 @@ export function PublicacaoProvider({ children }) {
       codigo:
         "function calcularIMC (peso, altura) { if (typeof peso !== 'number' || typeof altura !== 'number') {console.error('Por favor, insira valores numéricos válidos para peso e altura.'); return;}",
     },
+    {
+      titulo:"adiciona",
+      desc: "metodo de que adiciona uma negociaçao",
+      cor: "#992f62",
+      linguagemEscolhida:'Javascript',
+      codigo: `  adiciona() {
+        const negociacao = Negociacao.criaDe(this.inputData.value, this.inputQuantidade.value, this.inputValor.value);
+        if (!this.ehDiaUtil(negociacao.data)) {
+            this.mensagemView.update("Só são permitidas negociações em dias uteis");
+            return;
+        }
+        negociacao.data.setDate(12);
+        this.negociacoes.adiciona(negociacao);
+        this.limparFormulario();
+        this.atualizaView();
+    }
+           
+      `
 
+    },
+   
 
 ]);
 

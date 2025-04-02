@@ -1,13 +1,20 @@
 import coment from "../../assets/coment.svg";
 import like from "../../assets/like.svg";
+import likeVermelho from "../../assets/coraçaoVermelho.png";
 import icon from "../../assets/icon.jpg";
 import styles from "./card.module.scss";
 import { useInfos } from "../../contextos/contextoInfos";
 import hljs from "highlight.js";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function Card() {
   const { publicacao } = useInfos([]);
+
+  const [ativo, setAtivo] = useState(false);
+
+  const mudaCoracao = () => {
+    setAtivo((prevState) => !prevState);
+  };
 
   const postagens = publicacao.map((value, index) => {
     return (
@@ -22,7 +29,14 @@ function Card() {
         <div className={styles.secao}>
           <div className={styles.icones}>
             <img className={styles.img} src={coment} alt="comentar" />
-            <img className={styles.img} src={like} alt="Curtir" />
+            <img
+              className={styles.img}
+              onClick={() => {
+                mudaCoracao();
+              }}
+              src={!ativo ? likeVermelho : like}
+              alt="Curtir"
+            />
           </div>
           <div className={styles.perfil}>
             <img className={styles.imgPerfil} src={icon} alt="perfil " />

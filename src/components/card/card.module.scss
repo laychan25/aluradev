@@ -26,7 +26,7 @@ pre code .hljs {
   display: block;
   background-color: #041832;
   width: 450px;
-  height: 360px;
+  height: 400px;
   text-align: left;
   border-radius: 10px;
   box-sizing: border-box;
@@ -38,9 +38,13 @@ pre code .hljs {
   justify-self: center;
   background-color: black;
   width: 400px;
-  height: 200px;
+  height: 250px;
   color: rgb(231, 229, 225);
   border-radius: 5px;
+  overflow: auto;
+}
+.div::-webkit-scrollbar{
+    background-color: transparent;
 }
 
 .divCor {
@@ -83,10 +87,33 @@ pre code .hljs {
   height: 24px;
 }
 
- @media screen and (min-width: 450px) and (max-width: 1024px){
+
+
+@media screen and (max-width: 450px){
+  .conteiner{
+    width: 85vw;
+    height: 40vh;
+  }
+  .div{
+    width: 70vw;
+    height: 20vh;
+  }
+  
+  .infos{
+    font-size: 13px;
+    margin-left: 13px;
+    .p{
+      opacity: 1;
+    }
+  }
+
+  
+}
+
+ @media screen and (min-width: 450px) and (max-width:1080px){
    .conteiner{
     width: 80vw;
-    height: 45.5vh;
+    height: 40vh;
     gap: 20px;
     padding: 1rem;
   
@@ -103,8 +130,9 @@ pre code .hljs {
    
    .p{
     opacity: 1;
+    font-size: 16px;
    }
-
+   
    .secao{
     justify-content: space-between;
    }

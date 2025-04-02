@@ -78,12 +78,14 @@ function Infos({code}) {
             <option value="css">CSS</option>
             <option value="react">React</option>
           </select>
+          <div className={styles.borda}>
           <input
             onChange={handleChange}
             className={styles.cor}
             value={cor}
             type="color"
           ></input>
+            </div>
         </div>
         <button type="submit">Salvar</button>
       </form>

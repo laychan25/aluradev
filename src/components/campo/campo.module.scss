@@ -8,6 +8,7 @@
 }
 
 .inputTexto {
+  align-items: center;
   padding: 20px;
   width: 45vw;
   height: 60vh;
@@ -21,7 +22,6 @@
   pre {
     margin: 0;
     padding: 0;
-    background-color: #000;
     border-radius: 5px;
     overflow: auto;
   }
@@ -29,14 +29,12 @@
   pre code {
     display: block;
     white-space: pre-wrap;
-    color: inherit;
   }
 }
 
 .code {
   display: block;
   text-align: start;
-  background-color: #000 !important;
   color: #fff;
   padding: 20px;
   width: 100%;
