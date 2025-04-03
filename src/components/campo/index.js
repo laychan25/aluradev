@@ -31,7 +31,7 @@ function Campo({code, setCode}) {
 
   const salva = () => {
     toggleElemento();
-    console.log(code)
+    
   };
 
   return (

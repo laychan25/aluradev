@@ -10,12 +10,6 @@
   display: flex !important;
   flex-wrap: wrap;
   border: none;
-  white-space: pre-wrap;
-}
-
-.post2 {
-  background-color: none;
-  flex-wrap: wrap;
 }
 
 pre code .hljs {
@@ -25,37 +19,58 @@ pre code .hljs {
 .conteiner {
   display: block;
   background-color: #041832;
-  width: 450px;
-  height: 400px;
+  width: 35vw;
   text-align: left;
   border-radius: 10px;
   box-sizing: border-box;
   margin: 20px;
 }
 
-.div {
-  padding: 10px;
-  justify-self: center;
+.code{
+  height: 14vw;
   background-color: black;
-  width: 400px;
-  height: 250px;
+  border-radius: 10px;
+  width: 30vw; 
+  overflow-x: hidden;
+  overflow-y: auto;
+  white-space: normal; 
+  line-height: 1.5;
+  padding: 8px;
+}
+
+.code::-webkit-scrollbar{
+  background-color: transparent;
+}
+
+code {
+  flex-wrap: wrap;
+}
+
+pre {
+ 
+  white-space: pre-wrap;  
+  word-wrap: break-word;  
+  
+}
+
+.div {
+  justify-self: center;
+  background-color: black !important;
   color: rgb(231, 229, 225);
   border-radius: 5px;
-  overflow: auto;
-}
-.div::-webkit-scrollbar{
-    background-color: transparent;
+  width: 30vw;
+  height: 30vh;
 }
 
 .divCor {
   padding: 15px;
   border-radius: 5px;
-  margin-bottom: 20px;
 }
 
 .secao {
   display: flex;
   justify-content: space-between;
+  padding: 10px;
 }
 .infos {
   margin: 20px;
@@ -87,59 +102,65 @@ pre code .hljs {
   height: 24px;
 }
 
-
-
-@media screen and (max-width: 450px){
-  .conteiner{
+@media screen and (max-width: 450px) {
+  .conteiner {
     width: 85vw;
     height: 40vh;
   }
-  .div{
+  .div {
     width: 70vw;
     height: 20vh;
   }
-  
-  .infos{
+  .code{
+    width: 70vw;
+    height: 20vh;
+  }
+  .secao{
+    padding: 0;
+  }
+
+  .infos {
     font-size: 13px;
     margin-left: 13px;
-    .p{
+    .p {
       opacity: 1;
     }
   }
-
-  
 }
 
- @media screen and (min-width: 450px) and (max-width:1080px){
-   .conteiner{
+@media screen and (min-width: 450px) and (max-width: 1080px) {
+  .conteiner {
     width: 80vw;
-    height: 40vh;
+    height: 44vh;
     gap: 20px;
     padding: 1rem;
-  
-   }
-   .div{
+  }
+  .div {
     width: 70.2vw;
     height: 20.5vh;
-   }
+  }
 
-   .code{
+  .code {
+    width: 70vw;
+    height: 20vh;
     margin: 0;
-    padding: 0;
-   }
-   
-   .p{
+    padding: 10px;
+  }
+
+  .p {
     opacity: 1;
     font-size: 16px;
-   }
-   
-   .secao{
-    justify-content: space-between;
-   }
+  }
 
-   .perfil{
-    justify-self: flex-end;
+  .secao {
+    justify-content: space-between;
+    padding: 0;
     
-   }
+  }
+
+  .perfil {
+    justify-self: flex-end;
+  }
 }
+
 

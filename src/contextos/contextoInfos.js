@@ -1,15 +1,19 @@
 import { createContext, useContext, useState } from "react";
+import { nanoid } from "nanoid";
+
 
 export const ContextoInfos = createContext();
 
 export function PublicacaoProvider({ children }) {
   const [publicacao, setPublicacao] = useState([
     {
+      id: nanoid(),
       titulo: "Funçao formata Data",
       desc: "Essa funçao formata a data de duas maneiras distintas",
       cor: "#0E3343",
       linguagemEscolhida: "Javascript",
-      codigo:  `export function formatarData(data: Date, formato: FormatoData = FormatoData.PADRAO): string {
+      curtido: false,
+      codigo: `export function formatarData(data: Date, formato: FormatoData = FormatoData.PADRAO): string {
     if (formato === FormatoData.DIA_SEMANA_DIA_MES_ANO) {
         return data.toLocaleDateString("pt-br", {
             weekday: "long",
@@ -20,22 +24,26 @@ export function PublicacaoProvider({ children }) {
     } else if (formato === FormatoData.DIA_MES) {
         return data.toLocaleDateString("pt-br", { day: "2-digit", month: "2-digit" });
     }
-}`
+}`,
     },
-    
+
     {
+      id: nanoid(),
       titulo: "Funçao imc",
       desc: "Funçao que calcula o imc",
       cor: "#3d1d3f",
       linguagemEscolhida: "Javascript",
+      curtido: false,
       codigo:
         "function calcularIMC (peso, altura) { if (typeof peso !== 'number' || typeof altura !== 'number') {console.error('Por favor, insira valores numéricos válidos para peso e altura.'); return;}",
     },
     {
-      titulo:"adiciona",
+      id: nanoid(),
+      titulo: "adiciona",
       desc: "metodo de que adiciona uma negociaçao",
       cor: "#992f62",
-      linguagemEscolhida:'Javascript',
+      linguagemEscolhida: "Javascript",
+      curtido: false,
       codigo: `  adiciona() {
         const negociacao = Negociacao.criaDe(this.inputData.value, this.inputQuantidade.value, this.inputValor.value);
         if (!this.ehDiaUtil(negociacao.data)) {
@@ -48,21 +56,30 @@ export function PublicacaoProvider({ children }) {
         this.atualizaView();
     }
            
-      `
-
+      `,
     },
-   
+  ]);
 
-]);
-
+  const toglleCurtidas = (id) => {
+    setPublicacao((prev) =>
+      prev.map((pub) =>
+        pub.id === id ? { ...pub, curtido: !pub.curtido } : pub
+      )
+    );
+  };
 
   function atualizaPublicacao(novaPublicacao) {
-    setPublicacao((prev) => [...prev, ...novaPublicacao])
-     
+    const novaPublicacaoComId = {
+      id: nanoid(),
+      ...novaPublicacao
+    }
+    setPublicacao((prev) => [...prev, ...novaPublicacaoComId]);
   }
 
   return (
-    <ContextoInfos.Provider value={{ publicacao, atualizaPublicacao }}>
+    <ContextoInfos.Provider
+      value={{ publicacao, atualizaPublicacao, toglleCurtidas }}
+    >
       {children}
     </ContextoInfos.Provider>
   );
@@ -75,3 +92,5 @@ export function useInfos() {
   }
   return context;
 }
+
+export const usePublicacoes = () => useContext(PublicacaoProvider);
