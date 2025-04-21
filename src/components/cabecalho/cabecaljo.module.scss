@@ -69,6 +69,7 @@
 @media (max-width: 450px) {
   .header {
     display: flex;
+    position: relative;
     box-sizing: border-box;
     padding-bottom: 1rem;
     top: 0;
@@ -111,7 +112,6 @@
     position: absolute;
     width: 25px;
     height: 25px;
-    display: block;
     object-fit: contain;
   }
 
@@ -145,7 +145,6 @@
 
   .icone:hover {
     background-color: #41536a;
-    width: 32px;
     border-radius: 5px;
   }
 }
@@ -174,12 +173,14 @@
   }
 
   .icones{
-    display: block;
+    display: flex;
+    justify-self: center;
+    transition: all 0.3s ease;
    
   }
   .icone:hover{
-    width: 26px;
-    border-radius: 0;
+    border-radius: 12px;
+  
   }
 
 }

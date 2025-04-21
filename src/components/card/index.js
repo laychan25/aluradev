@@ -6,10 +6,10 @@ import styles from "./card.module.scss";
 import { useInfos } from "../../contextos/contextoInfos";
 import hljs from "highlight.js";
 import { useEffect } from "react";
-import { nanoid } from "nanoid";
 
 function Card() {
   const { publicacao,toglleCurtidas  } = useInfos([]);
+
 
  
 
@@ -25,7 +25,7 @@ function Card() {
   const publicaoes = publicacao.map((value, index) => {
    
     return (
-      <div key={value.id || nanoid()} className={styles.conteiner}>
+      <div key={value.id } className={styles.conteiner}>
         <div  className={styles.divCor} style={{ backgroundColor: value.cor }}>
         <div className={styles.div}>{cardCodigo[index]} </div>
         </div>

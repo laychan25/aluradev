@@ -17,13 +17,13 @@ function Infos({code}) {
   const { atualizaPublicacao } = useInfos();
 
   const guardaValores = () => {
-    atualizaPublicacao([{
+    atualizaPublicacao({
       titulo: nome,
       desc: desq,
       linguagemEscolhida: linguagem,
       cor: cor,
       codigo: code
-    }]);
+    });
   };
 
  

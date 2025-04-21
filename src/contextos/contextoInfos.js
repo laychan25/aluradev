@@ -73,9 +73,10 @@ export function PublicacaoProvider({ children }) {
       id: nanoid(),
       ...novaPublicacao
     }
-    setPublicacao((prev) => [...prev, ...novaPublicacaoComId]);
+    setPublicacao((prev) => [...prev, novaPublicacaoComId]);
   }
 
+  
   return (
     <ContextoInfos.Provider
       value={{ publicacao, atualizaPublicacao, toglleCurtidas }}
